@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import InteriorPage from "@/components/InteriorPage";
-import { MapPin, Phone, Clock3, ExternalLink } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact & Location | Library And Resource Centre",
@@ -17,15 +16,40 @@ export default function ContactPage() {
       title="We are on Ngong Road."
       intro="Find the location and contact information for Library And Resource Centre, Nairobi."
     >
-      <section className="section interior-section">
+      <section className="section interior-section contact-editorial">
         <div className="container">
-          <div className="contact-grid contact-page-grid">
-            <article className="contact-card"><span className="contact-icon"><MapPin /></span><h3>Our location</h3><p>Ngong Road, North, Nairobi, Kenya</p><a href={mapsUrl} target="_blank" rel="noreferrer">Get directions <ExternalLink size={15} /></a></article>
-            <article className="contact-card"><span className="contact-icon"><Phone /></span><h3>Call the centre</h3><p>020 2158352</p><a href="tel:+254202158352">Call 020 2158352 <Phone size={15} /></a></article>
-            <article className="contact-card"><span className="contact-icon"><Clock3 /></span><h3>Opening information</h3><p>Listed closing time: 5:00 PM</p><small>Full weekly opening schedule has not yet been confirmed.</small></article>
+          <div className="contact-editorial-heading">
+            <p className="editorial-kicker">PLAN YOUR VISIT</p>
+            <h2>Everything you need<br /><em>to find us.</em></h2>
+          </div>
+          <div className="contact-editorial-grid">
+            <article className="contact-editorial-card">
+              <span className="contact-number">01 / LOCATION</span>
+              <h3>Come see us.</h3>
+              <p>Ngong Road, North,<br />Nairobi, Kenya</p>
+              <a href={mapsUrl} target="_blank" rel="noreferrer">Get directions <span>↗</span></a>
+            </article>
+            <article className="contact-editorial-card">
+              <span className="contact-number">02 / PHONE</span>
+              <h3>Let's talk.</h3>
+              <p>020 2158352</p>
+              <a href="tel:+254202158352">Call the centre <span>↗</span></a>
+            </article>
+            <article className="contact-editorial-card">
+              <span className="contact-number">03 / HOURS</span>
+              <h3>Before you visit.</h3>
+              <p>Listed closing time: 5:00 PM</p>
+              <small>The full weekly opening schedule has not yet been confirmed. Please call ahead.</small>
+            </article>
           </div>
           <div className="contact-map-layout">
-            <div className="contact-map-copy"><div className="eyebrow dark-eyebrow"><span /> FIND YOUR WAY</div><h2>Plan your <em>route.</em></h2><p>Plus Code: PR46+3X Nairobi</p><p>For the latest directions, open the location in Google Maps or call the centre before travelling.</p><a className="primary-button" href={mapsUrl} target="_blank" rel="noreferrer">Open Google Maps <ExternalLink size={16} /></a></div>
+            <div className="contact-map-copy">
+              <p className="editorial-kicker">FIND YOUR WAY</p>
+              <h2>See you<br /><em>soon.</em></h2>
+              <p>Plus Code: PR46+3X Nairobi</p>
+              <p>For the latest directions, open the location in Google Maps or call the centre before travelling.</p>
+              <a className="primary-button" href={mapsUrl} target="_blank" rel="noreferrer">Open Google Maps <span>↗</span></a>
+            </div>
             <div className="map-frame"><iframe title="Map showing Ngong Road, Nairobi" src={embedUrl} loading="lazy" referrerPolicy="no-referrer-when-downgrade" /></div>
           </div>
         </div>
