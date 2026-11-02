@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { BookOpen, ArrowRight, Menu, X } from "lucide-react";
 
 const links = [
@@ -21,7 +22,7 @@ export default function SiteHeader() {
     <>
       <header className="header">
         <div className="container nav">
-          <a href="/#home" className="brand" onClick={() => setMenuOpen(false)}>
+          <Link href="/" className="brand" onClick={() => setMenuOpen(false)}>
             <span className="brand-icon">
               <BookOpen size={27} />
             </span>
@@ -29,7 +30,7 @@ export default function SiteHeader() {
               <strong>LIBRARY</strong>
               <small>AND RESOURCE CENTRE</small>
             </span>
-          </a>
+          </Link>
 
           <nav className="desktop-nav" aria-label="Main navigation">
             {links.map((link) => (
