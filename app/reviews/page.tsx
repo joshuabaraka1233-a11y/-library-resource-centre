@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import InteriorPage from "@/components/InteriorPage";
-import { Quote, Star, ExternalLink } from "lucide-react";
+import { Quote, ExternalLink } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Reviews | Library And Resource Centre",
@@ -28,7 +28,7 @@ export default function ReviewsPage() {
           <article className="featured-review">
             <Quote size={38} />
             <div className="eyebrow dark-eyebrow"><span /> FEATURED VISITOR COMMENT</div>
-            <blockquote>“It's a nice place to get some books to learn and have fun with.”</blockquote>
+            <blockquote>“It&apos;s a nice place to get some books to learn and have fun with.”</blockquote>
             <p>Short “Mr. Humble” Nico · Google review</p>
           </article>
         </div>
