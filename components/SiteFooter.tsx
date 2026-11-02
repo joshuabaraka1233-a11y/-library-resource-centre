@@ -12,15 +12,15 @@ export default function SiteFooter() {
           <Link href="/" className="brand footer-brand">
             <span className="brand-icon"><BookOpen size={25} /></span>
             <span><strong>LIBRARY</strong><small>AND RESOURCE CENTRE</small></span>
-          </a>
+          </Link>
           <p>Knowledge. Learning. Discovery.</p>
         </div>
         <div className="footer-links">
           <strong>Explore</strong>
-          <a href="/about">About the library</a>
-          <a href="/discover">Discover</a>
-          <a href="/reviews">Visitor reviews</a>
-          <a href="/contact">Contact & directions</a>
+          <Link href="/about">About the library</Link>
+          <Link href="/discover">Discover</Link>
+          <Link href="/reviews">Visitor reviews</Link>
+          <Link href="/contact">Contact & directions</Link>
         </div>
         <div className="footer-links footer-contact">
           <strong>Visit us</strong>
