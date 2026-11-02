@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import InteriorPage from "@/components/InteriorPage";
 import Link from "next/link";
-import { Quote, ExternalLink } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Reviews | Library And Resource Centre",
@@ -17,27 +16,27 @@ export default function ReviewsPage() {
       title="A word from visitors."
       intro="Read the feedback currently highlighted for Library And Resource Centre."
     >
-      <section className="section interior-section">
-        <div className="container review-page-grid">
-          <div className="review-score-card">
-            <span className="eyebrow dark-eyebrow"><span /> GOOGLE RATING</span>
-            <strong>4.3<span>/5</span></strong>
-            <div className="stars large-stars" aria-label="Google rating 4.3 out of 5">★★★★★</div>
+      <section className="section interior-section reviews-editorial">
+        <div className="container reviews-editorial-grid">
+          <div className="reviews-rating-panel">
+            <p className="editorial-kicker">GOOGLE RATING</p>
+            <strong>4.3<span> / 5</span></strong>
+            <div className="reviews-stars" aria-label="Google rating 4.3 out of 5">★★★★★</div>
             <p>Based on 10 Google reviews, as shown in the current website brief.</p>
-            <a className="text-link" href={mapsReviews} target="_blank" rel="noreferrer">View on Google <ExternalLink size={15} /></a>
+            <a href={mapsReviews} target="_blank" rel="noreferrer">Read on Google <span>↗</span></a>
           </div>
-          <article className="featured-review">
-            <Quote size={38} />
-            <div className="eyebrow dark-eyebrow"><span /> FEATURED VISITOR COMMENT</div>
+          <article className="reviews-feature">
+            <p className="editorial-kicker">A VISITOR'S WORDS</p>
             <blockquote>“It&apos;s a nice place to get some books to learn and have fun with.”</blockquote>
-            <p>Short “Mr. Humble” Nico · Google review</p>
+            <div className="reviews-attribution"><span></span><p>Short “Mr. Humble” Nico <small>Google review</small></p></div>
           </article>
         </div>
       </section>
-      <section className="interior-band">
-        <div className="container callout-row">
-          <div><div className="eyebrow dark-eyebrow"><span /> YOUR VISIT</div><h2>Discover the centre for yourself.</h2><p>Check the location and contact details before visiting.</p></div>
-          <Link className="primary-button" href="/contact">Plan your visit <ExternalLink size={15} /></Link>
+      <section className="reviews-bottom">
+        <div className="container reviews-bottom-inner">
+          <p className="editorial-kicker">YOUR VISIT</p>
+          <h2>Come and make<br /><em>your own discovery.</em></h2>
+          <Link href="/contact">Plan your visit <span>↗</span></Link>
         </div>
       </section>
     </InteriorPage>
