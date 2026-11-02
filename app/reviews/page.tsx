@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import InteriorPage from "@/components/InteriorPage";
+import Link from "next/link";
 import { Quote, ExternalLink } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -36,7 +37,7 @@ export default function ReviewsPage() {
       <section className="interior-band">
         <div className="container callout-row">
           <div><div className="eyebrow dark-eyebrow"><span /> YOUR VISIT</div><h2>Discover the centre for yourself.</h2><p>Check the location and contact details before visiting.</p></div>
-          <a className="primary-button" href="/contact">Plan your visit <ExternalLink size={15} /></a>
+          <Link className="primary-button" href="/contact">Plan your visit <ExternalLink size={15} /></Link>
         </div>
       </section>
     </InteriorPage>
