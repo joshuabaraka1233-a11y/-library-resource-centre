@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import InteriorPage from "@/components/InteriorPage";
+import Link from "next/link";
 import { BookMarked, GraduationCap, Laptop, Compass, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -32,7 +33,7 @@ export default function DiscoverPage() {
               <article className="area-card" key={number}>
                 <div className="area-card-top"><span>{number}</span><Icon size={25} /></div>
                 <h3>{title}</h3><p>{text}</p>
-                <a href="/contact">Ask about this <ArrowRight size={15} /></a>
+                <Link href="/contact">Ask about this <ArrowRight size={15} /></Link>
               </article>
             ))}
           </div>
@@ -41,7 +42,7 @@ export default function DiscoverPage() {
       <section className="interior-band">
         <div className="container callout-row">
           <div><div className="eyebrow dark-eyebrow"><span /> NEED MORE INFORMATION?</div><h2>Speak to the library.</h2><p>Contact the centre directly for the latest information about collections, services and visiting arrangements.</p></div>
-          <a className="primary-button" href="/contact">Contact details <ArrowRight size={16} /></a>
+          <Link className="primary-button" href="/contact">Contact details <ArrowRight size={16} /></Link>
         </div>
       </section>
     </InteriorPage>
