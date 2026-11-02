@@ -1,69 +1,269 @@
-import Image from "next/image";
+
+import {
+  ArrowRight,
+  BookOpen,
+  Clock3,
+  MapPin,
+  Phone,
+  Star,
+  Menu,
+  Search,
+  BookMarked,
+  GraduationCap,
+  Compass,
+  Quote,
+  ExternalLink,
+} from "lucide-react";
+
+const googleMaps =
+  "https://www.google.com/maps/search/?api=1&query=Library+And+Resource+Centre+Ngong+Road+Nairobi";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+    <main>
+      <div className="topbar">
+        <div className="container topbar-inner">
+          <span>KNOWLEDGE. LEARNING. DISCOVERY.</span>
+          <span>Ngong Road, Nairobi, Kenya</span>
+        </div>
+      </div>
+
+      <header className="header">
+        <div className="container nav">
+          <a href="#" className="brand">
+            <span className="brand-icon"><BookOpen size={27} /></span>
+            <span>
+              <strong>LIBRARY</strong>
+              <small>AND RESOURCE CENTRE</small>
+            </span>
+          </a>
+
+          <nav className="desktop-nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#discover">Discover</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+          </nav>
+
+          <a className="nav-button" href={googleMaps} target="_blank">
+            Visit the Library <ArrowRight size={16} />
+          </a>
+          <a className="mobile-menu" href="#contact" aria-label="Contact">
+            <Menu />
+          </a>
+        </div>
+      </header>
+
+      <section className="hero" id="home">
+        <div className="hero-overlay" />
+        <div className="container hero-content">
+          <div className="eyebrow">
+            <span /> A PLACE FOR KNOWLEDGE
+          </div>
+          <h1>
+            Open a book.
+            <br />
+            <em>Open a world.</em>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p>
+            Discover a welcoming space dedicated to reading,
+            learning and the pursuit of knowledge.
           </p>
+          <div className="hero-actions">
+            <a href="#about" className="primary-button">
+              Discover More <ArrowRight size={18} />
+            </a>
+            <a href={googleMaps} target="_blank" className="secondary-button">
+              <MapPin size={17} /> Find Our Location
+            </a>
+          </div>
+          <div className="hero-note">
+            <BookOpen size={18} />
+            <span>LIBRARY & RESOURCE CENTRE · NAIROBI</span>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="hero-side-label">READ · LEARN · GROW</div>
+      </section>
+
+      <section className="stats">
+        <div className="container stats-grid">
+          <div className="stat">
+            <span className="stat-icon"><Star /></span>
+            <div><strong>4.3/5</strong><small>Google rating</small></div>
+          </div>
+          <div className="stat">
+            <span className="stat-icon"><Quote /></span>
+            <div><strong>10</strong><small>Google reviews</small></div>
+          </div>
+          <div className="stat">
+            <span className="stat-icon"><MapPin /></span>
+            <div><strong>Nairobi</strong><small>Ngong Road</small></div>
+          </div>
+          <div className="stat">
+            <span className="stat-icon"><Clock3 /></span>
+            <div><strong>5:00 PM</strong><small>Listed closing time</small></div>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="section about-section" id="about">
+        <div className="container about-grid">
+          <div className="about-image">
+            <div className="image-caption">
+              <BookOpen size={21} />
+              <span>A WORLD OF KNOWLEDGE</span>
+            </div>
+          </div>
+          <div className="about-copy">
+            <div className="eyebrow dark-eyebrow">
+              <span /> WELCOME
+            </div>
+            <h2>Where knowledge meets <em>possibility.</em></h2>
+            <p>
+              Welcome to Library And Resource Centre, located along
+              Ngong Road in Nairobi. This website concept introduces
+              the library and provides a convenient starting point
+              for visitors seeking information.
+            </p>
+            <p className="muted">
+              Our institutional history, mission, collections and
+              services will be added after confirmation by library
+              management.
+            </p>
+            <a href="#contact" className="text-link">
+              Get in touch <ArrowRight size={17} />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="section discover-section" id="discover">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <div className="eyebrow dark-eyebrow"><span /> EXPLORE</div>
+              <h2>A space for <em>discovery.</em></h2>
+            </div>
+            <p>
+              A closer look at the information visitors can find
+              through this website.
+            </p>
+          </div>
+
+          <div className="discover-grid">
+            <article className="discover-card">
+              <div className="card-icon"><BookMarked /></div>
+              <span>01 / READING</span>
+              <h3>Books & Reading</h3>
+              <p>
+                Discover information about the library's books
+                and collections. Collection details await
+                confirmation.
+              </p>
+            </article>
+            <article className="discover-card">
+              <div className="card-icon"><GraduationCap /></div>
+              <span>02 / LEARNING</span>
+              <h3>Learning Resources</h3>
+              <p>
+                Explore learning and research resources.
+                Specific available materials will be confirmed.
+              </p>
+            </article>
+            <article className="discover-card">
+              <div className="card-icon"><Compass /></div>
+              <span>03 / VISITING</span>
+              <h3>Plan Your Visit</h3>
+              <p>
+                Find the library's location and contact
+                information before making your visit.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="review-section" id="reviews">
+        <div className="container review-inner">
+          <div className="review-mark"><Quote size={35} /></div>
+          <div className="review-content">
+            <div className="eyebrow">VISITOR FEEDBACK</div>
+            <h2>“It's a nice place to get some books to learn and have fun with.”</h2>
+            <p>Short “Mr. Humble” Nico · Google review</p>
+          </div>
+          <div className="review-rating">
+            <strong>4.3</strong>
+            <div className="stars">★★★★★</div>
+            <small>10 Google reviews</small>
+          </div>
+        </div>
+      </section>
+
+      <section className="section contact-section" id="contact">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <div className="eyebrow dark-eyebrow"><span /> VISIT US</div>
+              <h2>Let's connect.</h2>
+            </div>
+            <p>
+              Need directions or more information?
+              Use the contact details below.
+            </p>
+          </div>
+
+          <div className="contact-grid">
+            <div className="contact-card">
+              <span className="contact-icon"><MapPin /></span>
+              <h3>Our Location</h3>
+              <p>Ngong Road, North, Nairobi, Kenya</p>
+              <a href={googleMaps} target="_blank">
+                Get directions <ExternalLink size={15} />
+              </a>
+            </div>
+            <div className="contact-card">
+              <span className="contact-icon"><Phone /></span>
+              <h3>Call Us</h3>
+              <p>020 2158352</p>
+              <a href="tel:+254202158352">
+                Contact the library <ArrowRight size={15} />
+              </a>
+            </div>
+            <div className="contact-card">
+              <span className="contact-icon"><Clock3 /></span>
+              <h3>Opening Information</h3>
+              <p>Listed closing time: 5:00 PM</p>
+              <small>Full weekly schedule to be confirmed.</small>
+            </div>
+          </div>
+
+          <div className="map-panel">
+            <div>
+              <span className="eyebrow dark-eyebrow">FIND YOUR WAY</span>
+              <h3>Visit us along Ngong Road.</h3>
+              <p>Plus Code: PR46+3X Nairobi</p>
+            </div>
+            <a href={googleMaps} target="_blank" className="primary-button">
+              Open Google Maps <ExternalLink size={16} />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <footer className="footer">
+        <div className="container footer-top">
+          <a href="#home" className="brand footer-brand">
+            <span className="brand-icon"><BookOpen size={25} /></span>
+            <span><strong>LIBRARY</strong><small>AND RESOURCE CENTRE</small></span>
+          </a>
+          <p>Knowledge. Learning. Discovery.</p>
+        </div>
+        <div className="container footer-bottom">
+          <span>© 2026 Library And Resource Centre</span>
+          <span>Website demonstration · Subject to management approval</span>
+        </div>
+      </footer>
+    </main>
   );
 }
