@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.google.com"),
   title: {
     default: "Library And Resource Centre | Nairobi",
     template: "%s | Library And Resource Centre",
