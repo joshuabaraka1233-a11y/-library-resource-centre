@@ -1,5 +1,6 @@
 
 import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 
 import {
   ArrowRight,
@@ -229,20 +230,8 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="footer">
-        <div className="container footer-top">
-          <a href="#home" className="brand footer-brand">
-            <span className="brand-icon"><BookOpen size={25} /></span>
-            <span><strong>LIBRARY</strong><small>AND RESOURCE CENTRE</small></span>
-          </a>
-          <p>Knowledge. Learning. Discovery.</p>
-        </div>
-        <div className="container footer-bottom">
-          <span>© 2026 Library And Resource Centre</span>
-          <span>Website demonstration · Subject to management approval</span>
-        </div>
-      </footer>
       </main>
+      <SiteFooter />
     </>
   );
 }
