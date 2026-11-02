@@ -2,7 +2,6 @@ import type { ReactNode } from "react";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 
 type Props = {
   eyebrow: string;
@@ -28,7 +27,7 @@ export default function InteriorPage({ eyebrow, title, intro, children }: Props)
             <div className="eyebrow"><span /> {eyebrow}</div>
             <h1>{title}</h1>
             <p>{intro}</p>
-            <Link className="page-hero-link" href="/contact">Plan your visit <ArrowRight size={16} /></Link>
+            <Link className="page-hero-link" href="/contact">Plan your visit <span>↗</span></Link>
           </div>
         </section>
         {children}
