@@ -28,7 +28,7 @@ export default function SiteFooter() {
         </div>
       </div>
       <div className="container footer-bottom">
-        <span>© {new Date().getFullYear()} Library And Resource Centre</span>
+        <span>© 2026 Library And Resource Centre</span>
         <span>Website demonstration · Subject to management approval</span>
       </div>
     </footer>
