@@ -1,4 +1,5 @@
 import { ArrowUpRight, BookOpen, MapPin, Phone } from "lucide-react";
+import Link from "next/link";
 
 const mapsUrl =
   "https://www.google.com/maps/search/?api=1&query=Library+And+Resource+Centre+Ngong+Road+Nairobi";
@@ -8,7 +9,7 @@ export default function SiteFooter() {
     <footer className="footer">
       <div className="container footer-main">
         <div className="footer-brand-block">
-          <a href="/" className="brand footer-brand">
+          <Link href="/" className="brand footer-brand">
             <span className="brand-icon"><BookOpen size={25} /></span>
             <span><strong>LIBRARY</strong><small>AND RESOURCE CENTRE</small></span>
           </a>
