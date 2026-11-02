@@ -1,4 +1,6 @@
 
+import SiteHeader from "@/components/SiteHeader";
+
 import {
   ArrowRight,
   BookOpen,
@@ -6,7 +8,7 @@ import {
   MapPin,
   Phone,
   Star,
-  Menu,
+
   Search,
   BookMarked,
   GraduationCap,
@@ -28,32 +30,7 @@ export default function Home() {
         </div>
       </div>
 
-      <header className="header">
-        <div className="container nav">
-          <a href="#" className="brand">
-            <span className="brand-icon"><BookOpen size={27} /></span>
-            <span>
-              <strong>LIBRARY</strong>
-              <small>AND RESOURCE CENTRE</small>
-            </span>
-          </a>
-
-          <nav className="desktop-nav">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#discover">Discover</a>
-            <a href="#reviews">Reviews</a>
-            <a href="#contact">Contact</a>
-          </nav>
-
-          <a className="nav-button" href={googleMaps} target="_blank">
-            Visit the Library <ArrowRight size={16} />
-          </a>
-          <a className="mobile-menu" href="#contact" aria-label="Contact">
-            <Menu />
-          </a>
-        </div>
-      </header>
+      <SiteHeader />
 
       <section className="hero" id="home">
         <div className="hero-overlay" />
