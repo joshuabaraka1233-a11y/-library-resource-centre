@@ -34,9 +34,9 @@ export default function SiteHeader() {
 
           <nav className="desktop-nav" aria-label="Main navigation">
             {links.map((link) => (
-              <a key={link.label} href={link.href}>
+              <Link key={link.label} href={link.href}>
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -69,14 +69,14 @@ export default function SiteHeader() {
           aria-label="Mobile navigation"
         >
           {links.map((link) => (
-            <a
+            <Link
               key={link.label}
               href={link.href}
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
               <ArrowRight size={15} />
-            </a>
+            </Link>
           ))}
 
           <a
