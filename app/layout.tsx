@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ScrollAnimations from "@/components/ScrollAnimations";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -33,7 +34,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ScrollAnimations />
+        {children}
+      </body>
     </html>
   );
 }
