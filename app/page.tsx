@@ -9,7 +9,6 @@ import {
   Phone,
   Star,
 
-  Search,
   BookMarked,
   GraduationCap,
   Compass,
@@ -22,7 +21,9 @@ const googleMaps =
 
 export default function Home() {
   return (
-    <main>
+    <>
+      <a className="skip-link" href="#main-content">Skip to content</a>
+      <main id="main-content">
       <div className="topbar">
         <div className="container topbar-inner">
           <span>KNOWLEDGE. LEARNING. DISCOVERY.</span>
@@ -241,6 +242,7 @@ export default function Home() {
           <span>Website demonstration · Subject to management approval</span>
         </div>
       </footer>
-    </main>
+      </main>
+    </>
   );
 }
