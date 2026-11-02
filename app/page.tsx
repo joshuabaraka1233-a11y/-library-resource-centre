@@ -135,7 +135,7 @@ export default function Home() {
               <span>01 / READING</span>
               <h3>Books & Reading</h3>
               <p>
-                Discover information about the library's books
+                Discover information about the library&apos;s books
                 and collections. Collection details await
                 confirmation.
               </p>
@@ -154,7 +154,7 @@ export default function Home() {
               <span>03 / VISITING</span>
               <h3>Plan Your Visit</h3>
               <p>
-                Find the library's location and contact
+                Find the library&apos;s location and contact
                 information before making your visit.
               </p>
             </article>
@@ -167,7 +167,7 @@ export default function Home() {
           <div className="review-mark"><Quote size={35} /></div>
           <div className="review-content">
             <div className="eyebrow">VISITOR FEEDBACK</div>
-            <h2>“It's a nice place to get some books to learn and have fun with.”</h2>
+            <h2>“It&apos;s a nice place to get some books to learn and have fun with.”</h2>
             <p>Short “Mr. Humble” Nico · Google review</p>
           </div>
           <div className="review-rating">
@@ -183,7 +183,7 @@ export default function Home() {
           <div className="section-heading">
             <div>
               <div className="eyebrow dark-eyebrow"><span /> VISIT US</div>
-              <h2>Let's connect.</h2>
+              <h2>Let&apos;s connect.</h2>
             </div>
             <p>
               Need directions or more information?
