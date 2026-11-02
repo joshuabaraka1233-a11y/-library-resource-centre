@@ -4,11 +4,11 @@ import { useState } from "react";
 import { BookOpen, ArrowRight, Menu, X } from "lucide-react";
 
 const links = [
-  { label: "Home", href: "/#home" },
-  { label: "About", href: "/#about" },
-  { label: "Discover", href: "/#discover" },
-  { label: "Reviews", href: "/#reviews" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Discover", href: "/discover" },
+  { label: "Reviews", href: "/reviews" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const mapsUrl =
